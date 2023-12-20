@@ -8,6 +8,9 @@ public class environment : MonoBehaviour
     public float cooltime; // 쿨타임, 감소값
     public float pertime; // 쿨타임, 절대값
 
+    public float treecooltime;
+    public float treepertime;
+
     public Transform coaltransform; // 석탄 생성 위치
     public Transform coaltransform1; // 석탄 생성 위치1
     public Transform coaltransform2; // 석탄 생성 위치2
@@ -54,9 +57,13 @@ public class environment : MonoBehaviour
 
         cooltime -= Time.deltaTime; // 쿨타임 감소
 
-     
+        if (treecooltime <= 0)
+        {
+            tree.SetActive(true); // 석탄 활성화
+            treecooltime = treepertime; // 쿨타임 초기화
+        }
 
-      
+
 
         if (cooltime <= 0)
         {
