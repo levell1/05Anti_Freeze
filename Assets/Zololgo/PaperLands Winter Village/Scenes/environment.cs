@@ -54,11 +54,7 @@ public class environment : MonoBehaviour
 
         cooltime -= Time.deltaTime; // 쿨타임 감소
 
-        if (Input.GetKey(KeyCode.Alpha1)) // 임시로 바위 제거
-        {
-            Debug.Log("임시로 바위 제거");
-            coal.SetActive(false); // 석탄 비활성화
-        }
+     
 
       
 
