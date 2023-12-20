@@ -184,14 +184,14 @@ public class ArchitectUIHandler : MonoBehaviour
         {
             case BuildingType.Wall:
                 nameTxt.text = "Make Wall";
-                descriptionTxt.text = "Protection against the intrusion of monsters";
+                descriptionTxt.text = "Protection against monsters";
                 ingredient1Txt.text = "-20";
                 ingredient2Txt.text = "0";
                 break;
 
             case BuildingType.House:
                 nameTxt.text = "Make House";
-                descriptionTxt.text = "+5 HP / S";
+                descriptionTxt.text = "+1 Temp / S";
                 ingredient1Txt.text = "-10";
                 ingredient2Txt.text = "-10";
                 break;
@@ -205,35 +205,35 @@ public class ArchitectUIHandler : MonoBehaviour
 
             case BuildingType.Temple:
                 nameTxt.text = "Make Temple";
-                descriptionTxt.text = "When a character dies, experience a miracle";
+                descriptionTxt.text = "Make Water";
                 ingredient1Txt.text = "-30";
                 ingredient2Txt.text = "-0";
                 break;
 
             case BuildingType.Farm:
                 nameTxt.text = "Make Farm";
-                descriptionTxt.text = "+1 Hunger / S";
+                descriptionTxt.text = "Make Carrot";
                 ingredient1Txt.text = "-10";
                 ingredient2Txt.text = "-10";
                 break;
 
             case BuildingType.Tower:
                 nameTxt.text = "Make Tower";
-                descriptionTxt.text = "Your field of view will be expanded.";
+                descriptionTxt.text = "+1 Temp / S";
                 ingredient1Txt.text = "-20";
                 ingredient2Txt.text = "0";
                 break;
 
             case BuildingType.Barrack:
                 nameTxt.text = "Make Barrack";
-                descriptionTxt.text = "+10 ATK";
+                descriptionTxt.text = "Get New Weapon";
                 ingredient1Txt.text = "-20";
                 ingredient2Txt.text = "-0";
                 break;
 
             case BuildingType.Center:
                 nameTxt.text = "Make Center";
-                descriptionTxt.text = "+1 Temp / S";
+                descriptionTxt.text = "+1 HP / S";
                 ingredient1Txt.text = "-30";
                 ingredient2Txt.text = "-10";
                 break;
@@ -249,6 +249,7 @@ public class ArchitectUIHandler : MonoBehaviour
         }
         
         MakeBuildingUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void ShowUpgradeUI(BuildingType type)
@@ -271,27 +272,27 @@ public class ArchitectUIHandler : MonoBehaviour
 
             case BuildingType.Temple:
                 upgradenameTxt.text = "upgrade Temple";
-                upgradedescriptionTxt.text = "experience Super miracle";
+                upgradedescriptionTxt.text = "Make More Water";
                 upgradeingredient1Txt.text = "-0";
                 upgradeingredient2Txt.text = "-30";
                 break;
 
             case BuildingType.Farm:
                 upgradenameTxt.text = "upgrade Farm";
-                upgradedescriptionTxt.text = "+3 Hunger / S";
+                upgradedescriptionTxt.text = "Make More Carrot";
                 upgradeingredient1Txt.text = "0";
                 upgradeingredient2Txt.text = "-20";
                 break;
 
             case BuildingType.Tower:
                 upgradenameTxt.text = "upgrade Tower";
-                upgradedescriptionTxt.text = "Your field of view will be expanded more.";
+                upgradedescriptionTxt.text = "+2 Temp / S.";
                 upgradeingredient1Txt.text = "0";
                 upgradeingredient2Txt.text = "-20";
                 break;
 
             case BuildingType.Barrack:
-                upgradenameTxt.text = "upgrade Barrack";
+                upgradenameTxt.text = "Get Special Weapon";
                 upgradedescriptionTxt.text = "+20 ATK";
                 upgradeingredient1Txt.text = "-0";
                 upgradeingredient2Txt.text = "-20";
@@ -299,7 +300,7 @@ public class ArchitectUIHandler : MonoBehaviour
 
             case BuildingType.Center:
                 upgradenameTxt.text = "upgrade Center";
-                upgradedescriptionTxt.text = "+3 Temp / S";
+                upgradedescriptionTxt.text = "+2 HP / S";
                 upgradeingredient1Txt.text = "-10";
                 upgradeingredient2Txt.text = "-30";
                 break;
@@ -343,6 +344,7 @@ public class ArchitectUIHandler : MonoBehaviour
         else if (BuildingCheck[8])
             MakeArchery();
 
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void MakeWall()
