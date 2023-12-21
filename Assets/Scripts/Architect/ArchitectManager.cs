@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ArchitectManager : MonoBehaviour
@@ -111,7 +108,6 @@ public class ArchitectManager : MonoBehaviour
         FarmFloor.SetActive(false);
         Temple1.SetActive(false);
         TempleFloor.SetActive(false);
-        House1.SetActive(false);
 
         Wall2.SetActive(true);
         Farm2.SetActive(true);
